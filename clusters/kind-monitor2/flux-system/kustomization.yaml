@@ -12,3 +12,5 @@ resources:
 - gotk-monitoring.yaml
 - gotk-polaris.yaml
 - gotk-prometheus.yaml
+- gotk-vpa.yaml
+- gotk-goldilocks.yaml

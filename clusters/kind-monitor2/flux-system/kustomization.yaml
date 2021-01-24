@@ -6,7 +6,9 @@ resources:
 - gotk-sync.yaml
 - gotk-helm-repo.yaml
 - gotk-fairwinds-repo.yaml
+- gotk-metrics.yaml
 - gotk-ingress-controller.yaml
 - gotk-sealed-secrets.yaml
 - gotk-monitoring.yaml
 - gotk-polaris.yaml
+- gotk-prometheus.yaml

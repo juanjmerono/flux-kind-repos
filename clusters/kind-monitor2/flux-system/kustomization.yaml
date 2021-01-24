@@ -1,5 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- namespaces.yaml
 - gotk-components.yaml
 - gotk-sync.yaml
+- gotk-helm-repo.yaml
+- gotk-fairwinds-repo.yaml
+- gotk-ingress-controller.yaml
+- gotk-sealed-secrets.yaml
+- gotk-monitoring.yaml
+- gotk-polaris.yaml

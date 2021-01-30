@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: testing-ns2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: testing-svc
+  namespace: testing-ns2
+spec:
+  ports:
+  - port: 80
+    targetPort: 8888
+  selector:
+    app: testing-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testing-app
+  namespace: testing-ns2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testing-app
+  template:
+    metadata:
+      labels:
+        app: testing-app
+    spec:
+      containers:
+      - image: sinmsinm/peumaudio:0.0.0
+        name: testing-app
+        ports:
+        - containerPort: 8888

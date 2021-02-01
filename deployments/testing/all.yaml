@@ -31,7 +31,7 @@ spec:
         app: testing-app
     spec:
       containers:
-      - image: sinmsinm/peumaudio:0.0.0
+      - image: sinmsinm/peumaudio:0.0.1
         name: testing-app
         ports:
         - containerPort: 8888

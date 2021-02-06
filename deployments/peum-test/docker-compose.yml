@@ -1,8 +1,6 @@
 version: '3.1'
-
 services:
-
   peum:
-    image: sinmsinm/peumaudio:0.0.0 # {"$imagepolicy": "flux-system:peum-policy"}
+    image: docker.io/sinmsinm/peumaudio:0.0.1 # {"$imagepolicy": "flux-system:peum-policy"}
     ports:
-      - "8888:8888"
+    - "8888:8888"

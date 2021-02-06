@@ -5,9 +5,4 @@ services:
   peum:
     image: sinmsinm/peumaudio:0.0.1 # {"$imagepolicy": "flux-system:peum-policy"}
     ports:
-      - 80:8888
-    restart: always
-    deploy:
-      placement:
-        constraints:
-          - node.hostname == ${HOSTNAME}
+      - "8888:8888"

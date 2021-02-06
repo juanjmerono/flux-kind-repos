@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: peum-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: peum-app
+  template:
+    metadata:
+      labels:
+        app: peum-app
+    spec:
+      containers:
+      - name: peum-app
+        image: sinmsinm/peumaudio:0.0.1 # {"$imagepolicy": "flux-system:peum-policy"}
+        ports:
+        - containerPort: 8888

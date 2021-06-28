@@ -1,0 +1,9 @@
+# References between HelmRelease and ConfigMap
+nameReference:
+- kind: ConfigMap
+  version: v1
+  fieldSpecs:
+  - path: spec/valuesFrom/name
+    version: v2beta1
+    group: helm.toolkit.fluxcd.io
+    kind: HelmRelease
